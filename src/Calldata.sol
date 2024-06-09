@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
+import {Test, console2} from "forge-std/Test.sol";
 contract Calldata {
 
     uint256 public Uint;
@@ -21,8 +22,8 @@ contract Calldata {
     }
 
 
-    function createSelector(string calldata _funcName) external pure returns (bytes4 result) {
-        result = bytes4(keccak256(bytes(_funcName)));
+    function createSelector(string calldata _funcName) external pure returns (bytes4) {
+        return bytes4(keccak256(bytes(_funcName)));
     }
 
     function test_calldata_bool() external view returns (bool) {
@@ -36,7 +37,7 @@ contract Calldata {
     // Each parameter will be a 32 bytes hex string
     // 4 bytes function selector
     // 1st input = 32 bytes parameter zero padded from the left
-    function test_calldata_with_parameter_address(address _address) external pure returns (address) {
+    function test_calldata_with_parameter_address(address _address) external view returns (address) {
         return _address;
     }
 
