@@ -1,12 +1,12 @@
-## Solidity Storage and Memory
+## Solidity Storage, Memory and Calldata
 
-Exploring how storage and memory work in Solidity
+Exploring how storage, memory and calldata work in Solidity
 
-The src folder contains two files `Storage.sol` and `Memory.sol`
+The src folder contains three files `Storage.sol`, `Memory.sol` and `Calldata.sol`
 
 Each file contains contracts demonstrating how storage and memory work.
 
-The test folder contains two files `Storage.t.sol` and `Memory.t.sol`
+The test folder contains three files `Storage.t.sol`, `Memory.t.sol` and `Calldata.sol`
 
 Each file has tests that can be run to see how storage and memory work.
 
